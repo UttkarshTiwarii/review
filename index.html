@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITSS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        .container h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: black;
+        }
+
+        main {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 90%;
+            height: 90vh;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 20px;
+            z-index: 1;
+        }
+
+        .text {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            color: black;
+        }
+
+        .text p:first-child {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .text h1 {
+            font-size: 90px;
+            font-weight: 200;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .text p:last-child {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+            transform: translateY(-2px);
+        }
+
+        .glass-card {
+            position: absolute;
+            right: 130px;
+            bottom: 110px;
+            z-index: 10;
+            width: 300px;
+            height: 230px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 30px;
+            text-align: left;
+            color: white;
+            box-shadow: 0 4px 30px rgba(255, 255, 255, 0.15);
+        }
+
+        .glass-card p {
+            font-size: 15px;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .glass-card h1 {
+            font-size: 60px;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 0 40px;
+            }
+
+            .text h1 {
+                font-size: 70px;
+            }
+
+            .glass-card {
+                width: 250px;
+                height: 200px;
+                right: 40px;
+                bottom: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+
+            .hero-section {
+                width: 95%;
+                height: 95vh;
+                padding: 30px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .text {
+                max-width: 100%;
+            }
+
+            .text h1 {
+                font-size: 50px;
+            }
+
+            .text p:last-child {
+                font-size: 16px;
+            }
+
+            .glass-card {
+                position: absolute;
+                right: 50%;
+                transform: translateX(50%);
+                bottom: 40px;
+                width: 220px;
+                height: 180px;
+            }
+
+            .glass-card h1 {
+                font-size: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text h1 {
+                font-size: 38px;
+            }
+
+            .text p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 13px;
+            }
+
+            .glass-card {
+                width: 190px;
+                height: 160px;
+                bottom: 25px;
+            }
+
+            .glass-card h1 {
+                font-size: 38px;
+            }
+
+            .glass-card p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>FITSS</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <img src="./src/hero.jpeg" alt="Fashion Banner" class="hero-img">
+
+            <div class="text">
+                <p>NEW DROP '24</p>
+                <h1>ELEVATE <br> YOUR STYLE</h1>
+                <p>
+                    Minimal fits. Maximum impact. <br>
+                    Designed for the modern generation.
+                </p>
+                <button class="btn">SHOP NOW →</button>
+            </div>
+
+            <div class="glass-card">
+                <p>SUMMER COLLECTION</p>
+                <h1>'24</h1>
+                <p>LIMITED DROP</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
